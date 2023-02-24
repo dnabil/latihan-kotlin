@@ -63,6 +63,11 @@ fun main(){
         // when we use is to check, the obj will turn into the related class too.
         println(emp.name)
         println(emp.toString())
+        // smart casting can be used also in when expression like:
+        // when (any) {
+        //  is Employee -> //do something
+        //  is Boss -> //do something
+        // }
 
         // can't cast carelessly, like below (Exception ClassCastException)
         // var temp2: Boss = emp as Boss
