@@ -50,6 +50,8 @@ fun main(){
     var emp: Any = Employee("tadano")
     // any has 3 funs
     // 1. equals(Any?), 2. hashCode(): Int, 3. toString(): String
+    // when we use == to compare objects, kotlin actually use equals method
+    // AND that method can be overridden as we like
     println(emp.toString())
 
     // 'is' keyword is to check whether if an object is a type of a class.
@@ -88,4 +90,6 @@ fun main(){
     var myNumber: Int = 2
     var myString = myNumber as? String
     println(myString) // null *because Int is not a String.
+
+
 }
