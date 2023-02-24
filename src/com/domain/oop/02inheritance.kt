@@ -72,4 +72,20 @@ fun main(){
         // can't cast carelessly, like below (Exception ClassCastException)
         // var temp2: Boss = emp as Boss
     }
+
+    // with as, we can cast forcefully any data type.
+    // but it's dangerous bcz it will return an error if its wrong
+    var emp2: Employee = Employee("asd", 23.0)
+    // i use try and catch to prevent program from quitting
+    try {
+        var test =  emp2 as Boss
+    } catch (e: Exception) {
+        println("error occured!")
+    }
+
+    // but we can safely use as with nullable casts
+    // example:
+    var myNumber: Int = 2
+    var myString = myNumber as? String
+    println(myString) // null *because Int is not a String.
 }
