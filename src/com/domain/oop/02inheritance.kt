@@ -51,11 +51,18 @@ fun main(){
     // any has 3 funs
     // 1. equals(Any?), 2. hashCode(): Int, 3. toString(): String
     println(emp.toString())
+
+    // 'is' keyword is to check whether if an object is a type of a class.
     if (emp is Employee) {
         // cast Any obj to Employee
-        var temp: Employee = emp as Employee
-        println(temp.name)
-        println(temp.toString())
+        // 'as' keyword is used to cast obj into another type of Class
+        // var temp: Employee = emp as Employee
+
+        // BUT we don't need to cast it like that.
+        // Kotlin feature : Smart Casting
+        // when we use is to check, the obj will turn into the related class too.
+        println(emp.name)
+        println(emp.toString())
 
         // can't cast carelessly, like below (Exception ClassCastException)
         // var temp2: Boss = emp as Boss
